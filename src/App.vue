@@ -46,19 +46,31 @@ import TheWelcome from './components/TheWelcome.vue'
   </div>
   </header>
   <container>
-   <div>
-    <b-sidebar id="sidebar-1" tag='div' no-header-close visible=true title="Sidebar" shadow>
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar>
-  </div>
+      <b-row>
+        <b-col>
+          <div>
+            <div class="bd-sidebar border-bottom-0 col-md-3 col-xl-2 col-12">
+              <nav id="bd-docs-nav" aria-label="Main navigation" class="bd-links d-none d-md-block">
+                  <div class="px-3 py-2">
+                  <p>
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+                    in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                  </p>
+                  <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </b-col>
+      <b-col>  
+        <button />
+      </b-col>
+
+    </b-row>
+   
   </container>
-  <button/>
+
+
   </div>
 </template>
 
