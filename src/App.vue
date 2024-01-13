@@ -47,11 +47,25 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
   <container>
       <b-row>
-        <b-col>
+        <b-col cols="2">
           <div>
-            <div class="bd-sidebar border-bottom-0 col-md-3 col-xl-2 col-12">
+            <div class="bd-sidebar border-bottom-0">
               <nav id="bd-docs-nav" aria-label="Main navigation" class="bd-links d-none d-md-block">
                   <div class="px-3 py-2">
+                  <b-list-group>
+						<b-list-group-item href="#">Link 1</b-list-group-item>
+						<b-list-group-item href="#">Link 2</b-list-group-item>
+						<b-list-group-item href="#">Link 3</b-list-group-item>
+						<b-list-group-item href="#">Link 4</b-list-group-item>
+            	<b-list-group-item href="#">Link 5</b-list-group-item>
+						<b-list-group-item href="#">Link 6</b-list-group-item>
+						<b-list-group-item href="#">Link 7</b-list-group-item>
+						<b-list-group-item href="#">Link 8</b-list-group-item>
+            	<b-list-group-item href="#">Link 9</b-list-group-item>
+						<b-list-group-item href="#">Link 10</b-list-group-item>
+						<b-list-group-item href="#">Link 11</b-list-group-item>
+						<b-list-group-item href="#">Link 12</b-list-group-item>
+					</b-list-group>
                   <p>
                     Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
                     in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
@@ -62,8 +76,17 @@ import TheWelcome from './components/TheWelcome.vue'
             </div>
           </div>
         </b-col>
-      <b-col>  
-        <button />
+      <b-col cols="10">  
+       <div>
+  <b-button variant="primary">Primary</b-button>
+  <b-button variant="secondary">Secondary</b-button>
+  <b-button variant="success">Success</b-button>
+  <b-button variant="danger">Danger</b-button>
+  <b-button variant="warning">Warning</b-button>
+  <b-button variant="info">Info</b-button>
+  <b-button variant="light">Light</b-button>
+  <b-button variant="dark">Dark</b-button>
+</div>
       </b-col>
 
     </b-row>
