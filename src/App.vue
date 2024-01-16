@@ -7,7 +7,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <div id="app">
     <header>
     <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar  toggleable="lg" type="dark" variant="info">
       <b-navbar-brand >NavBar</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -20,10 +20,7 @@ import TheWelcome from './components/TheWelcome.vue'
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-          </b-nav-form>
+  
 
           <b-nav-item-dropdown text="Lang" right>
             <b-dropdown-item href="#">EN</b-dropdown-item>
@@ -46,46 +43,32 @@ import TheWelcome from './components/TheWelcome.vue'
   </div>
   </header>
   <container>
+    <div>
+    <b-sidebar  z-index="-1" visible=true no-header no-header-close no-close-on-backdrop no-close-on-esc no-close-on-route-change id="sidebar-1" title="Sidebar" shadow>
+      <br><br>
+      <h1>Opciones de Navegacion</h1>
+      <div class="px-3 py-2">
+        
+        <b-nav-item 
+    ><b-link :to="{ name: 'inicio' }">Inicio</b-link>
+  </b-nav-item>
+
+  <b-nav-item 
+    ><b-link :to="{ name: 'info' }">Info</b-link>
+  </b-nav-item>
+
+  <b-nav-item 
+    ><b-link :to="{ name: 'somerandom' }">Somerandom</b-link>
+  </b-nav-item>
+      </div>
+    </b-sidebar>
+  </div>
       <b-row>
-        <b-col cols="2">
-          <div>
-            <div class="bd-sidebar border-bottom-0">
-              <nav id="bd-docs-nav" aria-label="Main navigation" class="bd-links d-none d-md-block">
-                  <div class="px-3 py-2">
-                  <b-list-group>
-						<b-list-group-item href="#">Link 1</b-list-group-item>
-						<b-list-group-item href="#">Link 2</b-list-group-item>
-						<b-list-group-item href="#">Link 3</b-list-group-item>
-						<b-list-group-item href="#">Link 4</b-list-group-item>
-            	<b-list-group-item href="#">Link 5</b-list-group-item>
-						<b-list-group-item href="#">Link 6</b-list-group-item>
-						<b-list-group-item href="#">Link 7</b-list-group-item>
-						<b-list-group-item href="#">Link 8</b-list-group-item>
-            	<b-list-group-item href="#">Link 9</b-list-group-item>
-						<b-list-group-item href="#">Link 10</b-list-group-item>
-						<b-list-group-item href="#">Link 11</b-list-group-item>
-						<b-list-group-item href="#">Link 12</b-list-group-item>
-					</b-list-group>
-                  <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                    in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                  </p>
-                  <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-                </div>
-              </nav>
-            </div>
-          </div>
+        <b-col cols="3">
         </b-col>
-      <b-col cols="10">  
+      <b-col cols="9">  
        <div>
-  <b-button variant="primary">Primary</b-button>
-  <b-button variant="secondary">Secondary</b-button>
-  <b-button variant="success">Success</b-button>
-  <b-button variant="danger">Danger</b-button>
-  <b-button variant="warning">Warning</b-button>
-  <b-button variant="info">Info</b-button>
-  <b-button variant="light">Light</b-button>
-  <b-button variant="dark">Dark</b-button>
+  <router-view/>
 </div>
       </b-col>
 
