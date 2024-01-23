@@ -6,6 +6,8 @@
         Inicio
     </h1>
     <b-button href="/#/info" >Info</b-button>
+    <b-button href="/#/formulario" >Formulario</b-button>
+
     </div>
 </template>
 

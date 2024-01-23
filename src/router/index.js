@@ -4,12 +4,11 @@ import Vue from 'vue'
 Vue.use(VueRouter);
 
 const routes =[
-
-{
-    path:'/',
-    redirect:'/inicio'
-},
-
+    {
+        path:'*',
+        component:()=> import('../views/ErrorPages/Error404.vue')
+    },
+   
 {
     path:'/',
     component:{
@@ -19,6 +18,11 @@ const routes =[
     },
 
     children:[
+        {
+            path: '/formulario',
+            name:'formulario',
+            component: () => import('../components/Formulario.vue')
+        }   ,
         {
             path:'/inicio',
             name:'inicio',

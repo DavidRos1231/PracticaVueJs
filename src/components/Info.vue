@@ -7,6 +7,8 @@
         Info
     </h1>
     <b-button href="/#/somerandom" >SomeRandom</b-button>
+    <b-button href="/#/formulario" >Formulario</b-button>
+
 
   </div>
 </template>

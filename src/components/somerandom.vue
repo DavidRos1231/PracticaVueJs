@@ -5,6 +5,8 @@
     <h1>
         SomeRandom
     </h1>
+    <b-button href="/#/formulario" >Formulario</b-button>
+
   </div>
 </template>
 
