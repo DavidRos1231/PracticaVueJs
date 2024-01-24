@@ -145,50 +145,53 @@ export default{
     methods:{
     checkForm: function (e) {
 
-
+        var myDate= new Date(this.birth);
+        var fechaActual = new Date();
+        var edad = fechaActual.getFullYear() - myDate.getFullYear();
         this.errors = [];
         var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
         if (!this.name) {
-        this.errors.push('Name required.');
+        this.errors.push('Nombre requerido.');
         }
         if (!this.lname) {
-        this.errors.push('Last name required.');
+        this.errors.push('Apellido Paterno requerido.');
         }
         if (!this.cp) {
-            this.errors.push('Codigo postal required.');
+            this.errors.push('Codigo postal requerido.');
             
         }else if(this.cp.length != 5){
             this.errors.push('Codigo postal debe tener 5 digitos.');
         }
         if (!this.calle) {
-            this.errors.push('Calle required.');
+            this.errors.push('Calle requerido.');
         }
         if (!this.numerocasa) {
-            this.errors.push('Numero casa required.');
+            this.errors.push('Numero casa requerido.');
         }
         if (!this.ciudad) {
-            this.errors.push('Ciudad required.');
+            this.errors.push('Ciudad requerido.');
         }
         if (!this.birth) {
-            this.errors.push('Fecha nacimiento required.');
-        }else if(this.birth > Date.now()){
+            this.errors.push('Fecha nacimiento requerida.');
+        }else if(myDate > Date.now()){
             this.errors.push('Fecha nacimiento no puede ser mayor a la fecha actual.');
             // no menor a 18
-        }else if(this.birth < (Date.now() - 567648000000)){
+        }else if (edad < 18){
             this.errors.push('Fecha nacimiento no puede ser menor a 18 años.');
         }
 
         if (!this.correo) {
-            this.errors.push('Correo required.');
+            this.errors.push('Correo requerido.');
         }else if( !validEmail.test(this.correo)){
             this.errors.push('Correo invalido.');
         }
         
         if (!this.numerotel) {
-            this.errors.push('Numero telefono required.');
+            this.errors.push('Numero telefono requerido.');
+        }else if(this.numerotel.length != 10){
+            this.errors.push('Numero telefono debe tener 10 digitos.');
         }
-
 
       e.preventDefault();
     },
