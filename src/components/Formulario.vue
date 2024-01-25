@@ -112,6 +112,7 @@
     type="file" 
     id="foto" 
     name="foto" 
+    @change="changeFiles" ref="miarchivo"
     accept="image/png, image/jpeg" />
   </p> 
   <p>
@@ -140,9 +141,15 @@ export default{
             birth:null,
             correo:null,
             numerotel:null,
+            foto:null
         }
     },
     methods:{
+        changeFiles(){
+     //obtenemos los archivos
+     // se pueden asignar a un array u objeto
+     this.foto=this.$refs.miarchivo.files[0];
+    },
     checkForm: function (e) {
 
         var myDate= new Date(this.birth);
@@ -192,6 +199,14 @@ export default{
         }else if(this.numerotel.length != 10){
             this.errors.push('Numero telefono debe tener 10 digitos.');
         }
+        console.log(this.foto);
+        if (!this.foto) {
+          this.errors.push("La imagen es obligatoria.");
+        }else if(this.foto.size > 3000000){
+          console.log(this.foto.size);
+          this.errors.push("La imagen debe ser menor a 3mb.");
+        }
+
 
       e.preventDefault();
     },
